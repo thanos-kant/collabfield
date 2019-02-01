@@ -20,5 +20,10 @@
 // Variables
 @import "base/variables.scss";
 
+// Default styles
+@import "base/default.scss";
+
 // Partials - main css files
+@import "partials/*";
 @import "partials/layout/*";
+@import "responsive/*";
