@@ -20,8 +20,8 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username : root 
-  password : root 
+  username : postgres 
+  password : meanppmp 
 
 
 
@@ -45,7 +45,7 @@ development:
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
-  #port: 5432
+  #port: 3000
 
   # Schema search path. The server defaults to $user,public
   #schema_search_path: myapp,sharedapp,public
@@ -85,7 +85,7 @@ test:
 production:
   <<: *default
   database: collabfield_production
-  username: root
-  password: root
+  username: postgres
+  password: meanppmp
 
   
