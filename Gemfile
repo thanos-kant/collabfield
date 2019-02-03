@@ -45,8 +45,10 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'headless'
   gem 'capybara'
-  gem 'poltergeist'
   gem 'database_cleaner'
+  gem 'poltergeist'
+
+
 end
 
 group :development do
