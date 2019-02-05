@@ -4,5 +4,6 @@ module ApplicationHelper
   include NavigationHelper
   include Rails.application.routes.url_helpers
   include Private::ConversationsHelper
+  include Private::MessagesHelper
 
 end
