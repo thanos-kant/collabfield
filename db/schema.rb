@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 20190203144010) do
     t.string "branch"
   end
 
+  create_table "lists", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "content"
@@ -29,6 +35,14 @@ ActiveRecord::Schema.define(version: 20190203144010) do
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_posts_on_category_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string "name"
+    t.boolean "done"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "list_id"
   end
 
   create_table "users", force: :cascade do |t|
