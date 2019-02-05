@@ -6,6 +6,9 @@ def create_new_post_partial_path
       'posts/branch/create_new_post/not_signed_in'
     end
 end
+def post_format_partial_path
+  current_page?(root_path) ? 'posts/post/home_page' : 'posts/post/branch_page'
+end
 def all_categories_button_partial_path
     if params[:category].blank?
       'posts/branch/categories/all_selected'
