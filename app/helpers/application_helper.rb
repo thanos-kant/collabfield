@@ -3,4 +3,6 @@ include PostsHelper
 module ApplicationHelper
   include NavigationHelper
   include Rails.application.routes.url_helpers
+  include Private::ConversationsHelper
+
 end
