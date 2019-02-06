@@ -26,17 +26,17 @@ RSpec.describe Private::MessagesHelper, :type => :helper do
   end
 
   context '#sent_or_received' do
-  let(:user) { create(:user) }
-  let(:message) { create(:private_message) }
-  it 'returns message-sent' do
-    message.update(user_id: user.id)
-    expect(helper.sent_or_received(message, user)).to eq 'message-sent'
-  end
+    let(:user) { create(:user) }
+    let(:message) { create(:private_message) }
+    it 'returns message-sent' do
+      message.update(user_id: user.id)
+      expect(helper.sent_or_received(message, user)).to eq 'message-sent'
+    end
 
-  it 'returns message-received' do
-    expect(helper.sent_or_received(message, user)).to eq 'message-received'
+    it 'returns message-received' do
+      expect(helper.sent_or_received(message, user)).to eq 'message-received'
+    end
   end
-end
 
 context '#seen_or_unseen' do
   let(:message) { create(:private_message) }

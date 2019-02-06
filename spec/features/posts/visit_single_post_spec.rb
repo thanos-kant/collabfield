@@ -1,5 +1,4 @@
 require "rails_helper"
-require 'phantomjs'
 
 RSpec.feature "Visit single post", :type => :feature do
   let(:user) { create(:user) }

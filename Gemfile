@@ -62,6 +62,7 @@ gem 'devise'
 gem 'bootstrap_form'
 gem 'phantomjs'
 gem 'faker'
+gem 'gon'
 gem 'will_paginate', '~> 3.1.0'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
