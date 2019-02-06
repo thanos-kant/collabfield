@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :opened_conversations_windows
+
   def opened_conversations_windows
     if user_signed_in?
       # opened conversations
@@ -11,4 +12,5 @@ class ApplicationController < ActionController::Base
       @private_conversations_windows = []
     end
   end
+  
 end
