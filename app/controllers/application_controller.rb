@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :opened_conversations_windows
-
+  helper_method :current_user
   def opened_conversations_windows
     if user_signed_in?
       # opened conversations
