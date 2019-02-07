@@ -26,12 +26,13 @@ def nav_header_content_partials
   end
   partials
 end
+
 # return a conversation header partial's path
-def conversation_header_partial_path(conversation)
-  if conversation.class == Private::Conversation
-    'layouts/navigation/header/dropdowns/conversations/private_conversation'
-  else
-    'layouts/navigation/header/dropdowns/conversations/group_conversation'
-  end  
-end
+  def conversation_header_partial_path(conversation)
+    if conversation.class == Private::Conversation
+      'layouts/navigation/header/dropdowns/conversations/private'
+    else
+      'layouts/navigation/header/dropdowns/conversations/group'
+    end  
+  end
 end
