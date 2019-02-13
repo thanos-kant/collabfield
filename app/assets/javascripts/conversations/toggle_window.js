@@ -8,6 +8,23 @@ $(document).on('turbolinks:load', function () {
             var panel = $(this).parent();
             var panel_body = panel.find('.panel-body');
             var messages_list = panel.find('.messages-list');
+            // if window is collapsed, hide conversation menu options
+            if ( panel_body.css('display') == 'none' ) {
+                panel.find('.add-people-to-chat,\
+                            .add-user-to-contacts,\
+                            .contact-request-sent').hide();
+                conversation_heading = panel.find('.conversation-heading');
+                conversation_heading.css('width', '360px');
+
+            } else { // show conversation menu options
+                conversation_heading = panel.find('.conversation-heading');
+                conversation_heading.css('width', '320px');
+                panel.find('.add-people-to-chat,\
+                            .add-user-to-contacts,\
+                            .contact-request-sent').show();
+                // focus textarea
+                $('form textarea', this).focus();
+            }       
 
             panel_body.toggle(100, function () {
                 var messages_visible = $('ul', this).has('li').length;
